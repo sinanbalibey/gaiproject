@@ -1,0 +1,13 @@
+services:
+  translate:
+    image: sibacode/translate
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./data:/home/jovyan/work
+    environment:
+      - JUPYTER_TOKEN=iamironman
+
+volumes:
+  data:
+    driver: local
