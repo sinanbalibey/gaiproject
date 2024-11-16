@@ -90,6 +90,18 @@ def translate_text(file_path, target_language='en'):
     translated = translator.translate(text, dest=target_language)
     
     return translated.text
+
+file_path = 'input.txt'  
+target_language = 'en'
+
+translated_text = translate_text(file_path, target_language)
+
+with open("input.txt", "r", encoding="utf-8") as file:
+    text = file.read()
+
+print(text)
+
+print(translated_text)
 ```
 
 Bu fonksiyon, `input.txt` dosyasındaki metni alır ve hedef dil olarak `en` (İngilizce) belirler. Çeviri sonucu döndürülür.
